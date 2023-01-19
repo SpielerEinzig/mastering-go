@@ -1,31 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt")
 
 func main () {
 
-	//strings
-	var greet string = "Hello friend"
-	var name = "User"
-	var second string
-	third := "Meh"
+	var name string = "Ryan"
+	var age = 1000
 
-	second = "Mister"
+	//print line prints in separate lines as
+	//opposed to the print
+	fmt.Println(name, age)
 
-	fmt.Println(greet, name, second, third)
+	//print
+	fmt.Print(name)
+	fmt.Print(age)
 
-	//integers
-	var age1 int = 1000000000
-	var age2  = 20
-	age3 := 30
-
-	fmt.Println(age1, age2, age3)
-
-
-	//decimals
-	var d1 float64 = 0.42
-	var d2 float64 = 329838.52
-	d3 := 288.43
-
-	fmt.Println(d1, d2, d3)
+	//formatting strings
+	//print f is used to print formatted outputs to the console
+	//sprint f saves formatted outputs to a variable
+	//%v for varables, %q to quote the variable (only works on strings)
+	//%T for the type of variable
+	fmt.Printf("Hello, my name is %q and I am %v years old", name, age)
+	var data = fmt.Sprintf("Hello, my name is %q and I am %v years old", name, age)
+	fmt.Println(data)
 } 
